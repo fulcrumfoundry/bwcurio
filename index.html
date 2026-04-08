@@ -49,3 +49,280 @@ nav .nav-links a {
   color: var(--text-secondary); text-decoration: none; font-size: 12px;
   letter-spacing: 1.5px; text-transform: uppercase; transition: color 0.3s; position: relative;
 }
+nav .nav-links a::after {
+  content: ''; position: absolute; bottom: -5px; left: 0; width: 0; height: 1px;
+  background: var(--accent); transition: width 0.3s ease;
+}
+nav .nav-links a:hover::after { width: 100%; }
+
+/* === SECTIONS === */
+section { padding: 100px 40px; max-width: 1200px; margin: 0 auto; }
+section:nth-child(odd) { background: var(--bg-secondary); }
+
+h1 { font-size: 3.5rem; margin-bottom: 20px; color: var(--accent); }
+h2 { font-size: 2.5rem; margin-bottom: 30px; }
+h3 { font-size: 1.8rem; margin: 20px 0 15px 0; }
+p { margin-bottom: 20px; color: var(--text-secondary); line-height: 1.8; }
+
+.hero { text-align: center; padding: 150px 40px; background: linear-gradient(135deg, #0C1821 0%, #1A2B3D 100%); }
+.hero h1 { font-size: 4rem; }
+
+.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin: 30px 0; }
+.card { background: var(--bg-card); padding: 30px; border-radius: 8px; border: 1px solid var(--border);
+  transition: all 0.3s ease; }
+.card:hover { background: var(--bg-card-hover); border-color: var(--accent); transform: translateY(-5px); }
+
+.btn { display: inline-block; padding: 12px 30px; background: var(--accent); color: var(--bg-primary);
+  text-decoration: none; border-radius: 4px; transition: all 0.3s; border: none; cursor: pointer; font-size: 14px;
+  letter-spacing: 1px; text-transform: uppercase; }
+.btn:hover { background: var(--accent-light); transform: scale(1.05); }
+
+.highlight { color: var(--accent); font-weight: 500; }
+.stat { font-size: 2rem; color: var(--accent); font-weight: 600; }
+
+table { width: 100%; border-collapse: collapse; margin: 20px 0; }
+table th { background: var(--bg-card); padding: 15px; text-align: left; color: var(--accent); border-bottom: 2px solid var(--border); }
+table td { padding: 12px 15px; border-bottom: 1px solid var(--border-light); }
+table tr:hover { background: var(--bg-card-hover); }
+
+.image-container { max-width: 600px; margin: 30px auto; border-radius: 8px; overflow: hidden; }
+.image-container img { width: 100%; height: auto; display: block; }
+
+footer { background: var(--bg-primary); padding: 40px; text-align: center; border-top: 1px solid var(--border);
+  color: var(--text-muted); }
+
+@media (max-width: 768px) {
+  h1 { font-size: 2rem; }
+  h2 { font-size: 1.5rem; }
+  section { padding: 60px 20px; }
+  nav .nav-inner { padding: 0 20px; }
+  nav .nav-links { gap: 15px; }
+  .grid { grid-template-columns: 1fr; }
+  .hero { padding: 80px 20px; }
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <div class="nav-brand">Curio Fishers</div>
+    <ul class="nav-links">
+      <li><a href="#overview">Overview</a></li>
+      <li><a href="#market">Market</a></li>
+      <li><a href="#financials">Financials</a></li>
+      <li><a href="#team">Team</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<section class="hero">
+  <h1>Curio Collection by Hilton</h1>
+  <p style="font-size: 1.3rem; color: var(--accent-light); margin-top: 20px;">Distinctive Hotel Development - Fishers, Indiana</p>
+  <p style="color: var(--text-secondary); font-size: 1.1rem; margin-top: 30px;">A luxury boutique hotel experience combining authentic hospitality with distinctive design</p>
+</section>
+
+<section id="overview">
+  <h2>Project Overview</h2>
+  <p>The Curio Collection by Hilton - Fishers, Indiana represents a unique opportunity to develop a distinctive, luxury hotel that celebrates the character and culture of the vibrant Fishers community.</p>
+  
+  <div class="grid">
+    <div class="card">
+      <h3>Location</h3>
+      <p>Prime location in Fishers, Indiana's fastest growing commercial district, with excellent accessibility and visibility</p>
+    </div>
+    <div class="card">
+      <h3>Concept</h3>
+      <p>Distinctive luxury boutique hotel featuring authentic, locally-inspired design and world-class amenities</p>
+    </div>
+    <div class="card">
+      <h3>Market Timing</h3>
+      <p>Strategic entry into a high-growth market with strong demand for upscale hotel accommodations</p>
+    </div>
+  </div>
+</section>
+
+<section id="market">
+  <h2>Market Analysis</h2>
+  
+  <h3>Fishers Market Dynamics</h3>
+  <p>Fishers has emerged as one of Indiana's most dynamic and affluent communities, with consistent population growth, strong commercial development, and excellent amenities.</p>
+  
+  <table>
+    <tr>
+      <th>Metric</th>
+      <th>Value</th>
+      <th>Trend</th>
+    </tr>
+    <tr>
+      <td>Population Growth (5-yr CAGR)</td>
+      <td><span class="stat">3.2%</span></td>
+      <td>Positive</td>
+    </tr>
+    <tr>
+      <td>Median Household Income</td>
+      <td><span class="stat">$85,000+</span></td>
+      <td>Growing</td>
+    </tr>
+    <tr>
+      <td>Business Development</td>
+      <td><span class="stat">Rapid</span></td>
+      <td>Accelerating</td>
+    </tr>
+    <tr>
+      <td>Tourism & Hospitality Demand</td>
+      <td><span class="stat">Strong</span></td>
+      <td>Increasing</td>
+    </tr>
+  </table>
+  
+  <h3>Hotel Market Opportunity</h3>
+  <p>The market currently underserves the upscale boutique segment, with strong demand from business travelers, leisure visitors, and event attendees. Curio's distinctive positioning fills a critical gap in the market.</p>
+</section>
+
+<section id="financials">
+  <h2>Financial Projection</h2>
+  
+  <h3>Development Overview</h3>
+  <div class="grid">
+    <div class="card">
+      <h3>Room Count</h3>
+      <p><span class="stat">120-150</span> luxury guest rooms</p>
+    </div>
+    <div class="card">
+      <h3>Investment</h3>
+      <p><span class="stat">$25-30M</span> total project cost</p>
+    </div>
+    <div class="card">
+      <h3>Timeline</h3>
+      <p><span class="stat">24-30</span> months to opening</p>
+    </div>
+    <div class="card">
+      <h3>ROI Target</h3>
+      <p><span class="stat">18-22%</span> annualized return</p>
+    </div>
+  </div>
+  
+  <h3>Revenue Projections (Year 1 Full Year)</h3>
+  <table>
+    <tr>
+      <th>Revenue Stream</th>
+      <th>Projection</th>
+      <th>Notes</th>
+    </tr>
+    <tr>
+      <td>Room Revenue</td>
+      <td><span class="stat">$4.2-4.8M</span></td>
+      <td>75-80% occupancy assumption</td>
+    </tr>
+    <tr>
+      <td>Food & Beverage</td>
+      <td><span class="stat">$800K-1.0M</span></td>
+      <td>Restaurant & bar operations</td>
+    </tr>
+    <tr>
+      <td>Other Revenue</td>
+      <td><span class="stat">$300-400K</span></td>
+      <td>Parking, events, misc</td>
+    </tr>
+    <tr>
+      <td><strong>Total Gross Revenue</strong></td>
+      <td><strong><span class="stat">$5.3-6.2M</span></strong></td>
+      <td><strong>Year 1 Full Year Estimate</strong></td>
+    </tr>
+  </table>
+</section>
+
+<section id="team">
+  <h2>Development Team</h2>
+  
+  <p>The project brings together experienced professionals with a proven track record in hotel development, hospitality operations, and commercial real estate.</p>
+  
+  <div class="grid">
+    <div class="card">
+      <h3>Development Lead</h3>
+      <p>Extensive experience in boutique hotel development across the Midwest with 15+ years in commercial real estate</p>
+    </div>
+    <div class="card">
+      <h3>Operations Expert</h3>
+      <p>Hilton-affiliated hospitality professional with proven success in luxury hotel operations and guest experience</p>
+    </div>
+    <div class="card">
+      <h3>Design & Architecture</h3>
+      <p>Award-winning architectural firm specializing in distinctive hospitality design and placemaking</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2>Why Curio Collection?</h2>
+  
+  <p>The Curio Collection by Hilton offers distinctive properties that celebrate local character. This partnership provides:</p>
+  
+  <ul style="margin-left: 20px;">
+    <li style="margin-bottom: 10px;">Global brand recognition and reservation system access</li>
+    <li style="margin-bottom: 10px;">World-class loyalty program integration</li>
+    <li style="margin-bottom: 10px;">Operational support and best practice sharing</li>
+    <li style="margin-bottom: 10px;">Design flexibility to capture local market identity</li>
+    <li style="margin-bottom: 10px;">Revenue management and pricing optimization tools</li>
+  </ul>
+</section>
+
+<section id="contact">
+  <h2>Investment Opportunity</h2>
+  
+  <p>We are seeking investment partners and development capital to bring this distinctive hotel experience to Fishers. This represents a unique opportunity to develop a landmark property in one of Indiana's fastest-growing communities.</p>
+  
+  <div style="text-align: center; margin-top: 40px;">
+    <h3 style="color: var(--accent);">Let's Build Something Distinctive</h3>
+    <p style="font-size: 1.1rem; margin-top: 20px;">For more information about investment opportunities, partnerships, or project details:</p>
+    <p style="margin-top: 30px;">
+      <strong>Email:</strong> <span class="highlight">info@bwcurio.com</span><br>
+      <strong>Phone:</strong> <span class="highlight">(317) 123-4567</span>
+    </p>
+    <button class="btn" onclick="window.location.href='mailto:info@bwcurio.com'">Contact Us</button>
+  </div>
+</section>
+
+<footer>
+  <p>&copy; 2024 Curio Collection by Hilton - Fishers, Indiana. All rights reserved.</p>
+  <p style="margin-top: 10px; font-size: 0.9rem;">This document contains forward-looking statements and projections. Actual results may differ.</p>
+</footer>
+
+<script>
+// Smooth scroll for navigation links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function (e) {
+    const href = this.getAttribute('href');
+    if (href !== '#') {
+      e.preventDefault();
+      const target = document.querySelector(href);
+      if (target) {
+        target.scrollIntoView({behavior: 'smooth'});
+      }
+    }
+  });
+});
+
+// Navbar scroll effect
+let navbarOffset = 0;
+window.addEventListener('scroll', function() {
+  const nav = document.querySelector('nav');
+  if (window.pageYOffset > 50) {
+    nav.classList.add('scrolled');
+  } else {
+    nav.classList.remove('scrolled');
+  }
+});
+
+// Parallax effect for hero section
+window.addEventListener('scroll', function() {
+  const hero = document.querySelector('.hero');
+  if (hero) {
+    hero.style.transform = 'translateY(' + (window.pageYOffset * 0.3) + 'px) scale(1.1)';
+  }
+});
+</script>
+</body>
+</html>
